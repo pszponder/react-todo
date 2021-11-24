@@ -5,11 +5,11 @@ export default function Navigation(props) {
   return (
     <div>
       <h1 className="ui header center aligned">React ToDo App</h1>
-      <nav class="ui secondary pointing menu">
-        <a class="item active">All</a>
-        <a class="item">Top 3</a>
-        <a class="item">Pending</a>
-        <a class="item">Done</a>
+      <nav className="ui secondary pointing menu">
+        <a className="item active">All</a>
+        <a className="item">Top 3</a>
+        <a className="item">Pending</a>
+        <a className="item">Done</a>
       </nav>
     </div>
   );
