@@ -1,6 +1,6 @@
 import React from "react";
-import "TodoItem.styles.css";
+import "./TodoItem.styles.css";
 
-function TodoItem(props) {
+export default function TodoItem(props) {
   return <h1>TodoItem Works!</h1>;
 }

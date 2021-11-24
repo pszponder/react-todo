@@ -1,6 +1,6 @@
 import React from "react";
-import "AddTodo.styles.css";
+import "./AddTodo.styles.css";
 
-function AddTodo(props) {
+export default function AddTodo(props) {
   return <h1>AddTodo Works!</h1>;
 }

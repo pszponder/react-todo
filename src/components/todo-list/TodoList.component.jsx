@@ -1,6 +1,6 @@
 import React from "react";
-import "TodoList.styles.css";
+import "./TodoList.styles.css";
 
-function TodoList(props) {
+export default function TodoList(props) {
   return <h1>TodoList Works!</h1>;
 }
