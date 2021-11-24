@@ -6,10 +6,10 @@ export default function Navigation(props) {
     <div>
       <h1 className="ui header center aligned">React ToDo App</h1>
       <nav className="ui secondary pointing menu">
-        <a className="item active">All</a>
-        <a className="item">Top 3</a>
-        <a className="item">Pending</a>
-        <a className="item">Done</a>
+        <button className="item active">All</button>
+        <button className="item">Top 3</button>
+        <button className="item">Pending</button>
+        <button className="item">Done</button>
       </nav>
     </div>
   );
