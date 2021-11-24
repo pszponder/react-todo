@@ -13,6 +13,9 @@ export default function TodoItem(props) {
           <i class="edit icon"></i>
         </button>
         <button class="ui button">
+          <i class="check icon"></i>
+        </button>
+        <button class="ui button">
           <i class="delete icon"></i>
         </button>
       </div>
