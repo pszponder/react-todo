@@ -1,7 +1,7 @@
 import React from "react";
-import "./Header.styles.css";
+import "./Navigation.styles.css";
 
-export default function Header(props) {
+export default function Navigation(props) {
   return (
     <div>
       <h1 className="ui header center aligned">React ToDo App</h1>
