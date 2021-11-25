@@ -18,22 +18,13 @@ function App() {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/todos")
       .then((response) => response.json())
-      .then((json) => {
-        for (let i = 0; i < 3; i++) {
-          setDataArray([...dataArray, json[i]]);
+      .then((data) => {
+        let tempArray = [];
+        for (let i = 0; i < 5; i++) {
+          tempArray.push(data[i]);
         }
-      })
-      .catch((error) => {
-        console.log(error);
-        setDataArray([
-          ...dataArray,
-          {
-            userId: 1,
-            id: 1,
-            title: "delectus aut autem",
-            completed: false,
-          },
-        ]);
+
+        setDataArray(tempArray);
       });
   }, []);
 
