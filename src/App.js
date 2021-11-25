@@ -23,7 +23,6 @@ function App() {
         for (let i = 0; i < 5; i++) {
           tempArray.push(data[i]);
         }
-
         setDataArray(tempArray);
       });
   }, []);

@@ -4,7 +4,7 @@ import "./TodoItem.styles.css";
 export default function TodoItem(props) {
   return (
     <div className="todoItem ui segment teal tertiary">
-      <h3 className="ui header">Todo Description</h3>
+      <h3 className="ui header">{props.title}</h3>
       <div className="ui small basic icon buttons">
         <button className="ui button">
           <i className="exclamation icon"></i>
