@@ -3,7 +3,9 @@ import "./TodoItem.styles.css";
 
 export default function TodoItem(props) {
   return (
-    <div className="todoItem ui segment teal tertiary">
+    <div
+      className={`todoItem ui segment teal ${props.complete ? "tertiary" : ""}`}
+    >
       <h3 className="ui header">{props.title}</h3>
       <div className="ui small basic icon buttons">
         <button className="ui button">

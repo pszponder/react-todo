@@ -1,3 +1,12 @@
+# TODO:
+
+- Add ability to mark a task as COMPLETE
+- Add ability to edit a task
+- Add ability to mark a task as IMPORTANT
+- Add ability to clear all todos
+- Add functionality to the navigation bar to sort the todos
+- Incorporate all functionality using a reducer function (look up Use Dispatch)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
