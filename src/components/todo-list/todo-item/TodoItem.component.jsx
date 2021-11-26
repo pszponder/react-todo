@@ -4,11 +4,16 @@ import "./TodoItem.styles.css";
 export default function TodoItem(props) {
   return (
     <div
-      className={`todoItem ui segment teal ${props.complete ? "tertiary" : ""}`}
+      className={`todoItem ui segment ${props.important ? "teal" : ""} ${
+        props.complete ? "tertiary" : ""
+      }`}
     >
       <h3 className="ui header">{props.title}</h3>
       <div className="ui small basic icon buttons">
-        <button className="ui button">
+        <button
+          className="ui button"
+          onClick={(event) => props.onImportant(event, props)}
+        >
           <i className="exclamation icon"></i>
         </button>
         <button className="ui button">

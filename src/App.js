@@ -40,6 +40,7 @@ function App() {
         id: counter,
         title: text,
         completed: false,
+        important: false,
       },
     ]);
 
@@ -68,10 +69,28 @@ function App() {
     setDataArray(updatedState);
   };
 
+  // Toggle the important status of a todo item
+  const toggleImportant = (todoId) => {
+    const updatedState = dataArray.map((todo) => {
+      if (todo.id === todoId) {
+        todo.important = !todo.important;
+      }
+      return todo;
+    });
+
+    setDataArray(updatedState);
+  };
+
   return (
     <div className="App ui raised very padded text container segment">
       <DataContext.Provider
-        value={{ dataArray, addTodo, removeTodo, toggleComplete }}
+        value={{
+          dataArray,
+          addTodo,
+          removeTodo,
+          toggleComplete,
+          toggleImportant,
+        }}
       >
         <Navigation />
         <AddTodo />
