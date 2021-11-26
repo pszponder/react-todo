@@ -47,9 +47,18 @@ function App() {
     setCounter((prevCounter) => prevCounter + 1);
   };
 
+  // Remove todo from state
+  const removeTodo = (todoId) => {
+    // Filter out todo with id of todoId
+    const filteredTodos = dataArray.filter((todo) => todo.id !== todoId);
+
+    // Update state with filtered list of todos
+    setDataArray(filteredTodos);
+  };
+
   return (
     <div className="App ui raised very padded text container segment">
-      <DataContext.Provider value={{ dataArray, addTodo }}>
+      <DataContext.Provider value={{ dataArray, addTodo, removeTodo }}>
         <Navigation />
         <AddTodo />
         <TodoList />

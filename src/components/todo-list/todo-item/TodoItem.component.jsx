@@ -15,7 +15,10 @@ export default function TodoItem(props) {
         <button className="ui button">
           <i className="check icon"></i>
         </button>
-        <button className="ui button">
+        <button
+          className="ui button"
+          onClick={(event) => props.onDelete(event, props)}
+        >
           <i className="delete icon"></i>
         </button>
       </div>
