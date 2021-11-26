@@ -22,6 +22,11 @@ export default function TodoList(props) {
     dataContext.toggleImportant(props.id);
   }
 
+  // Create a handler function to handle editing of todo task
+  function handleEdit(event, props, editText) {
+    dataContext.editTodo(props.id, editText);
+  }
+
   return (
     <div className="ui segments">
       {dataContext.dataArray.map((todo) => (
@@ -34,6 +39,7 @@ export default function TodoList(props) {
           onDelete={handleDelete}
           onComplete={handleToggleComplete}
           onImportant={handleToggleImportant}
+          onEdit={handleEdit}
         />
       ))}
     </div>

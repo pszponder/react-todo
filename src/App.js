@@ -48,6 +48,18 @@ function App() {
     setCounter((prevCounter) => prevCounter + 1);
   };
 
+  // Edit todo from state
+  const editTodo = (todoId, updatedText) => {
+    const editedTodos = dataArray.map((todo) => {
+      if (todo.id === todoId) {
+        todo.title = updatedText;
+      }
+      return todo;
+    });
+
+    setDataArray(editedTodos);
+  };
+
   // Remove todo from state
   const removeTodo = (todoId) => {
     // Filter out todo with id of todoId
@@ -87,6 +99,7 @@ function App() {
         value={{
           dataArray,
           addTodo,
+          editTodo,
           removeTodo,
           toggleComplete,
           toggleImportant,
