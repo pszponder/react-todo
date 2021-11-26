@@ -56,9 +56,23 @@ function App() {
     setDataArray(filteredTodos);
   };
 
+  // Toggle the completed status of a todo item
+  const toggleComplete = (todoId) => {
+    const updatedState = dataArray.map((todo) => {
+      if (todo.id === todoId) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    });
+
+    setDataArray(updatedState);
+  };
+
   return (
     <div className="App ui raised very padded text container segment">
-      <DataContext.Provider value={{ dataArray, addTodo, removeTodo }}>
+      <DataContext.Provider
+        value={{ dataArray, addTodo, removeTodo, toggleComplete }}
+      >
         <Navigation />
         <AddTodo />
         <TodoList />

@@ -12,6 +12,11 @@ export default function TodoList(props) {
     dataContext.removeTodo(props.id);
   }
 
+  // Create a handler function to handle toggling a todo complete
+  function handleToggleComplete(event, props) {
+    dataContext.toggleComplete(props.id);
+  }
+
   return (
     <div className="ui segments">
       {dataContext.dataArray.map((todo) => (
@@ -21,6 +26,7 @@ export default function TodoList(props) {
           title={todo.title}
           complete={todo.completed}
           onDelete={handleDelete}
+          onComplete={handleToggleComplete}
         />
       ))}
     </div>
