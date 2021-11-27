@@ -16,6 +16,14 @@ function App() {
   // Initialize a counter state variable
   const [counter, setCounter] = useState(4);
 
+  // Initialize a todo filter state variable to filter data
+  const [filter, setFilter] = useState("all");
+
+  // Change the Filter state variable
+  const changeFilter = (newFilter) => {
+    setFilter(newFilter);
+  };
+
   // Fetch initial ToDo data from external API
   //  add fetched data to the data state variable
   useEffect(() => {
@@ -98,11 +106,13 @@ function App() {
       <DataContext.Provider
         value={{
           dataArray,
+          filter,
           addTodo,
           editTodo,
           removeTodo,
-          toggleComplete,
           toggleImportant,
+          toggleComplete,
+          changeFilter,
         }}
       >
         <Navigation />

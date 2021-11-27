@@ -27,9 +27,22 @@ export default function TodoList(props) {
     dataContext.editTodo(props.id, editText);
   }
 
+  // Create a filter function
+  function filterTodos(todos, filter) {
+    if (filter === "important") {
+      return todos.filter((todo) => todo.important);
+    } else if (filter === "pending") {
+      return todos.filter((todo) => !todo.completed);
+    } else if (filter === "complete") {
+      return todos.filter((todo) => todo.completed);
+    } else {
+      return todos;
+    }
+  }
+
   return (
     <div className="ui segments">
-      {dataContext.dataArray.map((todo) => (
+      {filterTodos(dataContext.dataArray, dataContext.filter).map((todo) => (
         <TodoItem
           key={todo.id}
           id={todo.id}
