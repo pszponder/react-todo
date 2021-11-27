@@ -1,6 +1,5 @@
 # TODO:
 
-- Add ability to clear all todos
 - Incorporate all functionality using a reducer function (look up Use Dispatch)
 
 # Getting Started with Create React App

@@ -119,6 +119,14 @@ function App() {
         <AddTodo />
         <TodoList />
       </DataContext.Provider>
+      <button
+        className="fluid ui button"
+        onClick={() => {
+          setDataArray([]);
+        }}
+      >
+        Clear All
+      </button>
     </div>
   );
 }
