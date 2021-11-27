@@ -9,7 +9,7 @@ export default function Navigation(props) {
         <button className="item active">All</button>
         <button className="item">Important</button>
         <button className="item">Pending</button>
-        <button className="item">Done</button>
+        <button className="item">Complete</button>
       </nav>
     </div>
   );
